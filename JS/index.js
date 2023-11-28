@@ -29,23 +29,22 @@ Btn.addEventListener("click", function(event){
 
 function render(){
     let list = ""
-    for(let i = 0; i < listItem.length; i++){
+    for(let j = 0; j < listItem.length; j++){
         list += 
-        `<li style = "list-style: none;margin-bottom:20px; position:relative; font-size:30px;text-transform: capitalize; font-weight: 800">
-        <input id="checkbox" class="check" type="checkbox" 
+        `<li class="list" style = "list-style: none;margin-bottom:10px; position:relative;color:#67729D; font-size:23px;text-transform: capitalize; font-weight: 800">
+        <input id="checkbox" checked class="check" type="checkbox" 
         style=" 
-        ;margin: 4px 0 0;
-        line-height: normal;
+        margin: 4px 0 0;
         width: 20px;
         height: 20px;
-
+        cursor:pointer;
         "
-        onchange="updateTextDecoration(this, ${i})">
-        <label for="checkbox" id="label-${i}" style="min-width: 10px;  overflow-wrap: break-word">
-        ${listItem[i]}
+        onchange="updateTextDecoration(this, ${j})">
+        <label for="checkbox" id="label-${j}" style="min-width: 10px;  overflow-wrap: break-word; margin-buttom:10px">
+        ${listItem[j]}
         </label>
         <input type="date" class= "date-input">
-        <button class="delete-btn" onclick="deleteItem(${i})">delete</button>
+        <button class="delete-btn" onclick="deleteItem(${j})"><i class="fas fa-trash trash"></i></button>
         </li>`
     }
     ulEL.innerHTML = list
@@ -53,17 +52,26 @@ function render(){
 }
 
 const styles = `
-    .delete-btn{
-        background-color: white;
-        color: red;
+    .list{
+        border:1px solid black;
+        padding:10px;
+        border-radius:5px
+    }
+    .delete-btn {
+        background-color:white;
         border:none;
         font-size: 17px;
         margin-top: 7px;
         cursor: pointer;
         position: absolute;
-        right:0;
-        font-weight:600;
-        text-transform: capitalize
+        right:10px;
+    }
+    .trash{
+        color:red;
+    }
+    .trash:hover{
+        transform:rotateY(360deg);
+        transition:1.5s
     }
     .date-input{
         width: 25%;
