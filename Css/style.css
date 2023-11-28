@@ -133,7 +133,7 @@ input{
    min-width: 20%;
    margin-top: 50px;
    overflow-wrap: break-word;
-   padding: 30px;
+   padding: 20px;
 }
 @media only screen and (max-width: 992px){
     .tasks{
@@ -157,14 +157,18 @@ input{
     input{
         width: 100%;
         margin-left: 5px;
+        border: 1px solid black;
     }
     .btn{
         margin-top: 10px;
     }
     .tasks{
         width: 90%;
+
     }
     #tasks-list{
-        font-size: 40px;
+        font-size: 30px;
+        color: #67729D;
+        margin-top: 10px;
     }
 }
