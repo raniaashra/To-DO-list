@@ -32,7 +32,7 @@ function render(){
     for(let j = 0; j < listItem.length; j++){
         list += 
         `<li class="list" style = "list-style: none;margin-bottom:10px; position:relative;color:#67729D; font-size:23px;text-transform: capitalize; font-weight: 800">
-        <input id="checkbox" checked class="check" type="checkbox" 
+        <input id="checkbox"  class="check" type="checkbox" 
         style=" 
         margin: 4px 0 0;
         width: 20px;
